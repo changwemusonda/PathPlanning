@@ -16,8 +16,9 @@ This repository presents an uncertainty-aware planning extension to CALVINConv2d
 This work is part of a broader replication of the CVPR 2022 deep differentiable planning pipeline, where four models were trained and evaluated on 15x15 gridworld mazes: CALVINConv2d, CALVINConv3d, VIN, and GPPN. The current repository isolates Improvement 2, Uncertainty-Aware Planning via MC Dropout, as an original extension beyond the paper’s baseline setup. It builds directly on the replication environment and checkpoints while adding a reproducible uncertainty analysis and calibration workflow.
 
 References:
-- [CVPR 2022 Paper](https://arxiv.org/abs/...)
-- [Main replication repo](...)
+References:
+- [CVPR 2022 Paper — Towards Real-World Navigation With Deep Differentiable Planners](https://openaccess.thecvf.com/content/CVPR2022/papers/Ishida_Towards_Real-World_Navigation_With_Deep_Differentiable_Planners_CVPR_2022_paper.pdf)
+- [Original paper implementation (CALVIN) — GitHub](https://github.com/shuishida/calvin)
 
 ## Key Insight
 
