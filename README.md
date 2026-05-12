@@ -46,6 +46,21 @@ High `aa_var` indicates epistemic uncertainty about local action legality and ma
 
 Calibration is evaluated with Expected Calibration Error (ECE) using 10 confidence bins over 200 evaluation episodes. Target criterion is ECE < 0.05. Additional analysis compares mean uncertainty in successful vs failed episodes, where positive Delta(fail - success) indicates uncertainty rises on harder or mispredicted trajectories.
 
+## Changes From Original Paper and CALVIN Repo
+
+This repository builds on the original CVPR 2022 work and the CALVIN implementation while introducing two focused extensions and a validation step used during evaluation:
+
+- **Uncertainty-Aware Planning (MC Dropout):** We enable stochastic dropout at inference and collect N=30 forward passes to compute `aa_mean` and `aa_var` for action-availability logits. This yields an uncertainty signal without changing the original network architecture.
+- **Trajectory Validation Check:** We added a validation routine that verifies whether plotted CALVINConv2d trajectories actually cross walls in the discrete 15×15 gridworld. The check compares each episode's saved positions and actions against the environment's `valid_actions` mask under two coordinate conventions: `xy` and `rowcol`.
+
+### Trajectory validation findings
+
+- The `xy` coordinate interpretation produced many wall-cell and invalid-action errors, indicating that `xy` is not the correct coordinate convention for this dataset.
+- The `rowcol` interpretation produced zero wall-cell hits and zero invalid actions, confirming that evaluated trajectories do not actually pass through walls.
+- The apparent wall-crossing visible in some figures is a visualization artifact: continuous trajectory lines are drawn across the discrete grid representation, which can visually cross cell boundaries even though the discrete positions and actions remain valid.
+
+See the evaluation scripts and notebook for the exact validation routine and for the code that computes `aa_mean` / `aa_var` during MC Dropout inference.
+
 ## Notebook Pipeline
 
 The Colab notebook is organized into six primary executable cells, with one optional diagnostic cell.
