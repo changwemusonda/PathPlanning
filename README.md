@@ -277,7 +277,7 @@ Rendered trajectories appeared to cross walls. Our validation confirmed that und
 ## Contributions
 
 - **Changwe B. Musonda** – Environment setup, codebase porting, trajectory validation, manuscript
--- **Pyae Song Aung** – Uncertainty extension, model training, 100-episode evaluation  
+- **Pyae Song Aung** – Uncertainty extension, model training, 100-episode evaluation
 - **Thomas McDonnell** – Experimental setup, dataset handling, figure preparation
 
 ## Citation
