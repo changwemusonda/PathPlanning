@@ -5,7 +5,7 @@
 [![CUDA](https://img.shields.io/badge/CUDA-12.x-green)](https://developer.nvidia.com/cuda-toolkit)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
 
-**Authors:** Changwe B. Musonda, Pyson Aung, Thomas McDonnell  
+**Authors:** Changwe B. Musonda, Pyae Song Aung, Thomas McDonnell  
 **Institution:** California State Polytechnic University, Pomona  
 **Course:** ECE 4990 - Final Project
 
@@ -277,7 +277,7 @@ Rendered trajectories appeared to cross walls. Our validation confirmed that und
 ## Contributions
 
 - **Changwe B. Musonda** – Environment setup, codebase porting, trajectory validation, manuscript
-- **Pyson Aung** – Uncertainty extension, model training, 100-episode evaluation  
+-- **Pyae Song Aung** – Uncertainty extension, model training, 100-episode evaluation  
 - **Thomas McDonnell** – Experimental setup, dataset handling, figure preparation
 
 ## Citation
@@ -285,7 +285,7 @@ Rendered trajectories appeared to cross walls. Our validation confirmed that und
 ```bibtex
 @inproceedings{musonda2024calvin_uncertainty,
     title={An Entropy-Based Uncertainty Extension of CALVIN for Interpretable Gridworld Navigation},
-    author={Musonda, Changwe B. and Aung, Pyson and McDonnell, Thomas},
+    author={Musonda, Changwe B. and Aung, Pyae Song and McDonnell, Thomas},
     booktitle={ECE 4990 Final Project, Cal Poly Pomona},
     year={2024}
 }
